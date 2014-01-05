@@ -13,7 +13,7 @@ group :assets do
 	gem 'uglifier', '1.2.3'
 end
 
-gem 'jquery-rails', '~> 3.0.0'
+gem 'jquery-rails', ' ~> 2.0.0' #There was no version 2.0.0 so we get a higher version
 
 group :test do
 	gem 'capybara', '1.1.2'
@@ -23,6 +23,9 @@ group :production do
 	gem 'pg', '0.12.2'
 end
 
+gem 'bootstrap-sass', '2.0.0'
+
 gem 'libv8', '3.16.14.3'
 gem 'execjs'
 gem 'therubyracer'
+
