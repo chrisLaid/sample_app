@@ -5,13 +5,14 @@
 </head>
 <body>
 	<div class="center hero-unit">
-		<h1>Welcome to You Gist</h1>
-		<h2>gist | jist |</h2>
-		<h2>the substance or essence of speech</h2>
-		<h2><a href="http://railstutorial.org/">Click Here</a> to learn more.
+		<h1>Welcome to AceBomb</h1>
+		<h2>Speak up!</h2>
+		<h2>Express yourself</h2>
+		<h2><%= link_to "Click Here", 'about' %></a> to learn more.
 		</h2>
 		<%= link_to "Sign up now!", 'signup_path', class: "btn btn-large btn-primary" %>
 	</div>
-	<%= link_to image_tag("bae.PNG", alt: "Rails"), 'http://rubyonrails.org/' %>
+	<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+	<p>Powered by Rails</p>
 </body>
 </html>
