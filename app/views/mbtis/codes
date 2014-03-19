@@ -1,0 +1,407 @@
+<%= form_for @mbti, url: {action: "exam"}, html: {class: "nifty_form"} do |f|%>
+<%= form_for(@mbti) do |f|%>
+<%= render 'shared/error messages', object: f.object %>
+
+  def exam
+  	#@mbti = Mbti.new(params[:mbti])
+  	@mbti = current_user.mbtis.build(params[:mbti])
+  	if @mbti.save
+  	  redirect_to root_path
+  	else
+  	  render 'static_pages/home'
+  	end
+  end
+
+
+
+ def exam
+  	@mbti = Mbti.new(params[:mbti])
+  	#@mbti = current_user.mbtis.build(params[:mbti])
+  	@mbti.En = 0.0
+  	@mbti.In = 0.0
+  	@mbti.Sg = 0.0
+  	@mbti.Ng = 0.0
+  	@mbti.Tg = 0.0
+  	@mbti.Fg = 0.0
+  	@mbti.Jg = 0.0
+  	@mbti.Pg = 0.0
+  	@mbti.type = ""
+
+    if @mbti.q1 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q2 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q3 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q4 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q5 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q6 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q7 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q8 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q9 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q10 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q11 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q12 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q13 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q14 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q15 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q16 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q17 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q18 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q19 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q20 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q21 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q22 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q23 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q24 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q25 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q26 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q27 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q28 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q29 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q30 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q31 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q32 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q33 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q34 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q35 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q36 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q37 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q38 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q39 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q40 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q41 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q42 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q43 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q44 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q45 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q46 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q47 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q48 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q49 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q50 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q51 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q52 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q53 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q54 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q55 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q56 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q57 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q58 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q59 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q60 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q61 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q62 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q63 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q64 == "A"
+      @mbti.En += 1.0
+    else
+      @mbti.In += 1.0
+    end
+    if @mbti.q65 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q66 == "A"
+      @mbti.Sg += 1.0
+    else
+      @mbti.Ng += 1.0
+    end
+    if @mbti.q67 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q68 == "A"
+      @mbti.Tg += 1.0
+    else
+      @mbti.Fg += 1.0
+    end
+    if @mbti.q69 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+    if @mbti.q70 == "A"
+      @mbti.Jg += 1.0
+    else
+      @mbti.Pg += 1.0
+    end
+
+    if @mbti.En > @mbti.In
+      @mbti.type = "E"
+    else
+      @mbti.type = "I"	
+    end
+    if @mbti.Sg > @mbti.Ng
+      @mbti.type = "#{@mbti.type}S"
+    else
+      @mbti.type = "#{@mbti.type}S"	
+    end
+    if @mbti.Tg > @mbti.Fg
+      @mbti.type = "#{@mbti.type}T"
+    else
+      @mbti.type = "#{@mbti.type}F"	
+    end
+    if @mbti.Jg > @mbti.Pg
+      @mbti.type = "#{@mbti.type}J"
+    else
+      @mbti.type = "#{@mbti.type}P"	
+    end
+
+  	if @mbti.save
+  	  redirect_to root_path
+  	else
+  	  render 'mbtis/exam'
+  	end
+  end

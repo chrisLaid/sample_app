@@ -3,10 +3,15 @@ FactoryGirl.define  do
     sequence(:name) { |n| "Person #{n}" }
     sequence(:email) { |n| "person_#{n}@example.com"}
 	password "foobar"
-	password confirmation "foobar"
+	password_confirmation "foobar"
   end
   
   factory :admin do
   	admin true
+  end
+
+  factory :microposts do
+  	content "Lorem ipsum"
+  	user
   end
 end

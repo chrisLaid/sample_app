@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Woofer</title>
-</head>
-<body>
-	<div class="center hero-unit">
-		<h1>Welcome to Woofer</h1>
-		<h2>Learn more about you and other people</h2>
-		<h2><%= link_to "Click Here", 'about' %></a> to find out how.
-		</h2>
-		<%= link_to "Sign up now!", 'signup', class: "btn btn-large btn-primary" %>
-	</div>
-	<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
-	<p>Powered by Rails</p>
-</body>
-</html>
+<% provide(:title) %>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Woofs Kiri Woofs</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome to Woofer</h1>
+	<h2>Learn more about you and other people</h2>
+	<h2><%= link_to "Click Here", 'about' %></a> to find out how.
+	</h2>
+	<%= link_to "Sign up now!", 'signup', class: "btn btn-large btn-primary"%>
+  </div>
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/'%>
+  <p>Powered by Rails</p>
+<% end %> 

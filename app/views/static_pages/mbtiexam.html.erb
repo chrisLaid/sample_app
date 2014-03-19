@@ -1,0 +1,225 @@
+<% provide(:title, 'MBTI Test') %>
+<h1>Mbti Test</h1>
+ 
+  <%= form_for(@mbti) do |f| %>
+  
+  <div class="row">
+  <div class="span6 offset4">
+  <ol>
+    <li><p>At a party do you:</p></li>
+    <p><%= f.radio_button(:q1, "A") %> Interact with many, including strangers</p>
+    <p><%= f.radio_button(:q1, "B") %> Interact with a few, known to you</p> 
+    <li><p>Are you more:</p></li>
+    <p><%= f.radio_button(:q2, "A") %> Realistic than speculative</p>
+    <p><%= f.radio_button(:q2, "B") %> Speculative than realistic</p>
+    <li><p>Is it worse to:</p></li>
+    <p><%= f.radio_button(:q3, "A") %> Stick to a solution that is already working</p>
+    <p><%= f.radio_button(:q3, "B") %> Create a much better solution</p> 
+    <li><p>Are you impressed by:</p></li>
+    <p><%= f.radio_button(:q4, "A") %> Principles</p>
+    <p><%= f.radio_button(:q4, "B") %> Emotions</p> 
+    <li><p>Are drawn toward the:</p></li>
+    <p><%= f.radio_button(:q5, "A") %> Convincing</p>
+    <p><%= f.radio_button(:q5, "B") %> Touching</p> 
+    <li><p>Do you prefer to work:</p></li>
+    <p><%= f.radio_button(:q6, "A") %> To deadlines</p>
+    <p><%= f.radio_button(:q6, "B") %> Just "whenever"</p> 
+    <li><p>You tend to choose:</p></li>
+    <p><%= f.radio_button(:q7, "A") %> Rather carefully</p>
+    <p><%= f.radio_button(:q7, "B") %> Somewhat impulsively</p> 
+    <li><p>At parties do you:</p></li>
+    <p><%= f.radio_button(:q8, "A") %> Stay late</p>
+    <p><%= f.radio_button(:q8, "B") %> Leave early</p> 
+    <li><p>Are you more attracted to:</p></li>
+    <p><%= f.radio_button(:q9, "A") %> Practical and sensible people</p>
+    <p><%= f.radio_button(:q9, "B") %> Creative and imaginative people</p> 
+    <li><p>Are you more interested in:</p></li>
+    <p><%= f.radio_button(:q10, "A") %> What is actual</p>
+    <p><%= f.radio_button(:q10, "B") %> What is possible</p> 
+    <li><p>In judging others are you more swayed by:</p></li>
+    <p><%= f.radio_button(:q11, "A") %> Laws than circumstances</p>
+    <p><%= f.radio_button(:q11, "B") %> Circumstances than laws</p> 
+    <li><p>You approach a person because:</p></li>
+    <p><%= f.radio_button(:q12, "A") %> you need something</p>
+    <p><%= f.radio_button(:q12, "B") %> you want a personal connection</p> 
+    <li><p>Are you more:</p></li>
+    <p><%= f.radio_button(:q13, "A") %> Punctual</p>
+    <p><%= f.radio_button(:q13, "B") %> Leisurely</p> 
+    <li><p>Does it bother you more having things:</p></li>
+    <p><%= f.radio_button(:q14, "A") %> Incomplete</p>
+    <p><%= f.radio_button(:q14, "B") %> Complete</p> 
+    <li><p>In your social groups are you:</p></li>
+    <p><%= f.radio_button(:q15, "A") %>  always up to date of other's happenings</p>
+    <p><%= f.radio_button(:q15, "B") %> behind on the news</p> 
+    <li><p>In doing ordinary things are you more likely to:</p></li>
+    <p><%= f.radio_button(:q16, "A") %> Do it the usual way</p>
+    <p><%= f.radio_button(:q16, "B") %> Do it your own way</p> 
+    <li><p>Writers should</p></li>
+    <p><%= f.radio_button(:q17, "A") %> Express the exact meaning</p>
+    <p><%= f.radio_button(:q17, "B") %> Express through analogies</p> 
+    <li><p>Which appeals to you more:</p></li>
+    <p><%= f.radio_button(:q18, "A") %> Consistency of thought</p>
+    <p><%= f.radio_button(:q18, "B") %> Harmonious human relationships</p> 
+    <li><p>Are you more comfortable in making:</p></li>
+    <p><%= f.radio_button(:q19, "A") %> Logical judgments</p>
+    <p><%= f.radio_button(:q19, "B") %> Value judgments</p> 
+    <li><p>Do you want things:</p></li>
+    <p><%= f.radio_button(:q20, "A") %> Settled and decided</p>
+    <p><%= f.radio_button(:q20, "B") %> Whatever hapens</p> 
+    <li><p>Would you say you are more:</p></li>
+    <p><%= f.radio_button(:q21, "A") %> Serious and determined</p>
+    <p><%= f.radio_button(:q21, "B") %> Easy-going</p> 
+    <li><p>Before calling somebody over the phone:</p></li>
+    <p><%= f.radio_button(:q22, "A") %> You are spontaneous</p>
+    <p><%= f.radio_button(:q22, "B") %> You rehearse what you will say</p>
+    <li><p>Facts:</p></li>
+    <p><%= f.radio_button(:q23, "A") %> "Speak for themselves"</p>
+    <p><%= f.radio_button(:q23, "B") %> Illustrate principles</p>
+    <li><p>Visionaries are:</p></li>
+    <p><%= f.radio_button(:q24, "A") %> impractical</p>
+    <p><%= f.radio_button(:q24, "B") %> fascinating</p>  
+    <li><p>Are you more often:</p></li>
+    <p><%= f.radio_button(:q25, "A") %> cool-headed</p>
+    <p><%= f.radio_button(:q25, "B") %> warm-hearted</p>
+    <li><p>When making considerations you prefer:</p></li>
+    <p><%= f.radio_button(:q26, "A") %> justice</p>
+    <p><%= f.radio_button(:q26, "B") %> mercy</p>
+    <li><p>Should one usually let events occur:</p></li>
+    <p><%= f.radio_button(:q27, "A") %> by careful selection and choice</p>
+    <p><%= f.radio_button(:q27, "B") %> randomly and by chance</p><li><p>Do you feel better about:</p></li>
+    <p><%= f.radio_button(:q28, "A") %> having purchased</p>
+    <p><%= f.radio_button(:q28, "B") %> having the option to buy</p>
+    <li><p>In company do you:</p></li>
+    <p><%= f.radio_button(:q29, "A") %> initiate conversation</p>
+    <p><%= f.radio_button(:q29, "B") %> wait to be approached</p>
+    <li><p>Common sense is:</p></li>
+    <p><%= f.radio_button(:q30, "A") %> rarely questionable</p>
+    <p><%= f.radio_button(:q30, "B") %> frequently questionable</p>
+    <li><p>Children often do not:</p></li>
+    <p><%= f.radio_button(:q31, "A") %> make themselves useful enough</p>
+    <p><%= f.radio_button(:q31, "B") %> exercise their fantasy</p>
+    <li><p>In making decisions do you feel more comfortable with:</p></li>
+    <p><%= f.radio_button(:q32, "A") %> standards</p>
+    <p><%= f.radio_button(:q32, "B") %> feelings</p>
+    <li><p>Are you more:</p></li>
+    <p><%= f.radio_button(:q33, "A") %> firm than gentle</p>
+    <p><%= f.radio_button(:q33, "B") %> gentle than firm</p>
+    <li><p>Which is more admirable:</p></li>
+    <p><%= f.radio_button(:q34, "A") %> the ability to organize and be methodical</p>
+    <p><%= f.radio_button(:q34, "B") %> the ability to adapt and make do</p>
+    <li><p>Do you put more value on:</p></li>
+    <p><%= f.radio_button(:q35, "A") %> infinite</p>
+    <p><%= f.radio_button(:q35, "B") %> open-minded</p>
+    <li><p>Does new and non-routine interaction with others:</p></li>
+    <p><%= f.radio_button(:q36, "A") %> stimulate and energize you</p>
+    <p><%= f.radio_button(:q36, "B") %> tax your reserves</p>
+    <li><p>Are you more frequently:</p></li>
+    <p><%= f.radio_button(:q37, "A") %> a practical sort of person</p>
+    <p><%= f.radio_button(:q37, "B") %> a fanciful sort of person</p>
+    <li><p>Are you more likely to:</p></li>
+    <p><%= f.radio_button(:q38, "A") %> see how others are useful</p>
+    <p><%= f.radio_button(:q38, "B") %> see how others see</p>
+    <li><p>Which is more satisfying:</p></li>
+    <p><%= f.radio_button(:q39, "A") %> to discuss an issue thoroughly</p>
+    <p><%= f.radio_button(:q39, "B") %> to arrive at agreement on an issue</p>
+    <li><p>Which rules you more:</p></li>
+    <p><%= f.radio_button(:q40, "A") %> your head</p>
+    <p><%= f.radio_button(:q40, "B") %> your heart</p>
+    <li><p>Are you more comfortable with work that is:</p></li>
+    <p><%= f.radio_button(:q41, "A") %> contracted</p>
+    <p><%= f.radio_button(:q41, "B") %> done on a casual basis</p>
+    <li><p>Do you tend to look for:</p></li>
+    <p><%= f.radio_button(:q42, "A") %> the orderly</p>
+    <p><%= f.radio_button(:q42, "B") %> whatever turns up</p>
+    <li><p>Do you prefer:</p></li>
+    <p><%= f.radio_button(:q43, "A") %> many friends with brief contact</p>
+    <p><%= f.radio_button(:q43, "B") %> a few friends with more lengthy contact</p>
+    <li><p>Do you go more by:</p></li>
+    <p><%= f.radio_button(:q44, "A") %> facts</p>
+    <p><%= f.radio_button(:q44, "B") %> principles</p>
+    <li><p>Are you more interested in:</p></li>
+    <p><%= f.radio_button(:q45, "A") %> production and distribution</p>
+    <p><%= f.radio_button(:q45, "B") %> design and research</p>
+    <li><p>Which is more of a compliment:</p></li>
+    <p><%= f.radio_button(:q46, "A") %> "There is a very logical person"</p>
+    <p><%= f.radio_button(:q46, "B") %> "There is a very sentimental person"</p>
+    <li><p>Do you value in yourself more that you are:</p></li>
+    <p><%= f.radio_button(:q47, "A") %> unwavering</p>
+    <p><%= f.radio_button(:q47, "B") %> devoted</p>
+    <li><p>Do you more often prefer the:</p></li>
+    <p><%= f.radio_button(:q48, "A") %> final and unalterable statement</p>
+    <p><%= f.radio_button(:q48, "B") %> tentative and preliminary statement</p>
+    <li><p>Are you more comfortable:</p></li>
+    <p><%= f.radio_button(:q49, "A") %> after a decision</p>
+    <p><%= f.radio_button(:q49, "B") %> before a decision</p>
+    <li><p>Do you:</p></li>
+    <p><%= f.radio_button(:q50, "A") %> speak easily and at length with strangers</p>
+    <p><%= f.radio_button(:q50, "B") %> find little to say to strangers</p>
+    <li><p>Are you more likely to trust your:</p></li>
+    <p><%= f.radio_button(:q51, "A") %> experience</p>
+    <p><%= f.radio_button(:q51, "B") %> hunch</p>
+    <li><p>Do you feel:</p></li>
+    <p><%= f.radio_button(:q52, "A") %> more practical than ingenious</p>
+    <p><%= f.radio_button(:q52, "B") %> more ingenious than practical</p>
+    <li><p>Which person is more to be complimented one of:</p></li>
+    <p><%= f.radio_button(:q53, "A") %> clear person</p>
+    <p><%= f.radio_button(:q53, "B") %> strong feeling</p>
+    <li><p>Are you inclined more to be:</p></li>
+    <p><%= f.radio_button(:q54, "A") %> fair-minded</p>
+    <p><%= f.radio_button(:q54, "B") %> sympathetic</p>
+    <li><p>Is it preferable mostly to:</p></li>
+    <p><%= f.radio_button(:q55, "A") %> make sure things are arranged</p>
+    <p><%= f.radio_button(:q55, "B") %> just let things happen</p>
+    <li><p>In relationships should most things be:</p></li>
+    <p><%= f.radio_button(:q56, "A") %> re-negotiable</p>
+    <p><%= f.radio_button(:q56, "B") %> random and circumstantial</p>
+    <li><p>When the phone rings do you:</p></li>
+    <p><%= f.radio_button(:q57, "A") %> hasten to get to it first</p>
+    <p><%= f.radio_button(:q57, "B") %> hope someone else will answer</p>
+    <li><p>Do you prize more in yourself:</p></li>
+    <p><%= f.radio_button(:q58, "A") %> strong sense of reality</p>
+    <p><%= f.radio_button(:q58, "B") %> a vivid imagination</p>
+    <li><p>Are you drawn more to:</p></li>
+    <p><%= f.radio_button(:q59, "A") %> fundamentals</p>
+    <p><%= f.radio_button(:q59, "B") %> overtones</p>
+    <li><p>Which seems the greater error:</p></li>
+    <p><%= f.radio_button(:q60, "A") %> to be too passionate</p>
+    <p><%= f.radio_button(:q60, "B") %> to be too objective</p>
+    <li><p>Do you see yourself as basically:</p></li>
+    <p><%= f.radio_button(:q61, "A") %> hard-headed</p>
+    <p><%= f.radio_button(:q61, "B") %> soft-hearted</p>
+    <li><p>Which situation appeals to you more:</p></li>
+    <p><%= f.radio_button(:q62, "A") %> the structured and scheduled</p>
+    <p><%= f.radio_button(:q62, "B") %> the unstructured and unscheduled</p>
+    <li><p>Are you a person that is more:</p></li>
+    <p><%= f.radio_button(:q63, "A") %> routinized than whimsical</p>
+    <p><%= f.radio_button(:q63, "B") %> whimsical than routinized</p>
+    <li><p>Are you more inclined to be:</p></li>
+    <p><%= f.radio_button(:q64, "A") %> easy to approach</p>
+    <p><%= f.radio_button(:q64, "B") %> somewhat reserved</p>
+    <li><p>In writings do you prefer:</p></li>
+    <p><%= f.radio_button(:q65, "A") %> the more literal</p>
+    <p><%= f.radio_button(:q65, "B") %> the more figurative</p>
+    <li><p>Is it harder for you to:</p></li>
+    <p><%= f.radio_button(:q66, "A") %> identify with others</p>
+    <p><%= f.radio_button(:q66, "B") %> utilize others</p>
+    <li><p>Which do you wish more for yourself:</p></li>
+    <p><%= f.radio_button(:q67, "A") %> clarity of reason</p>
+    <p><%= f.radio_button(:q67, "B") %> strength of compassion</p>
+    <li><p>Which is the greater fault:</p></li>
+    <p><%= f.radio_button(:q68, "A") %> being indiscriminate</p>
+    <p><%= f.radio_button(:q68, "B") %> being critical</p>
+    <li><p>Do you prefer the:</p></li>
+    <p><%= f.radio_button(:q69, "A") %> planned event</p>
+    <p><%= f.radio_button(:q69, "B") %> unplanned event</p>
+    <li><p>Do you tend to be more:</p></li>
+    <p><%= f.radio_button(:q70, "A") %> deliberate than spontaneous</p>
+    <p><%= f.radio_button(:q70, "B") %> spontaneous than deliberate</p>
+  </ol>
+  <br/>
+  <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+  </div>
+  </div>
+  <% end %>
+  
+
