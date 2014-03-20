@@ -17,6 +17,10 @@ class UsersController < ApplicationController
   def usersmbtidescription
     @user = User.find(params[:id])
     @usersmbtis = @user.mbtis.last
+    if @usersmbtis.nil?
+      @userdummy = User.first
+      @usersmbtis = @userdummy.mbtis.last
+    end
   end
 
   def new
