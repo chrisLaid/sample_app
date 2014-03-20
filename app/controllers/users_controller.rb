@@ -7,7 +7,16 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
-    @mbtis = @user.mbtis.last
+    @usersmbti = @user.mbtis.last
+    if @usersmbti.nil?
+      @user = User.first
+      @usersmbti = @user.mbtis.last
+    end
+  end
+
+  def usersmbtidescription
+    @user = User.find(params[:id])
+    @usersmbtis = @user.mbtis.last
   end
 
   def new

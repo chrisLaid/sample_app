@@ -1,0 +1,50 @@
+<% provide(:title, 'MBTI description') %>
+  <h1><%= @usersmbtis.typecode %></h1>
+  <% if @usersmbtis.typecode.include?('ENTJ') %>
+    <%= render 'shared/entj' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('INTJ') %>
+    <%= render 'shared/intj' %>
+  <% end %>  
+  <% if @usersmbtis.typecode.include?('ENTP') %>
+    <%= render 'shared/entp' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('INTP') %>
+    <%= render 'shared/intp' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('ENFJ') %>
+    <%= render 'shared/enfj' %>
+  <% end %>  
+  <% if @usersmbtis.typecode.include?('INFJ') %>
+    <%= render 'shared/infj' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('ENFP') %>
+    <%= render 'shared/enfp' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('INFP') %>
+    <%= render 'shared/infp' %>
+  <% end %>  
+  <% if @usersmbtis.typecode.include?('ESTJ') %>
+    <%= render 'shared/estj' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('ISTJ') %>
+    <%= render 'shared/istj' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('ESTP') %>
+    <%= render 'shared/estp' %>
+  <% end %>  
+  <% if @usersmbtis.typecode.include?('ISTP') %>
+    <%= render 'shared/istp' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('ESFJ') %>
+    <%= render 'shared/esfj' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('ISFJ') %>
+    <%= render 'shared/isfj' %>
+  <% end %>  
+  <% if @usersmbtis.typecode.include?('ESFP') %>
+    <%= render 'shared/esfp' %>
+  <% end %>
+  <% if @usersmbtis.typecode.include?('ISFP') %>
+    <%= render 'shared/isfp' %>
+  <% end %>

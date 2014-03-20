@@ -2,7 +2,7 @@ SampleApp::Application.routes.draw do
 
   resources :users do
     member do
-      get :following, :followers
+      get :following, :followers, :initiaze_values
     end
   end
   resources :sessions, only: [:new,:create, :destroy]
@@ -13,6 +13,7 @@ SampleApp::Application.routes.draw do
 #match '/microposts', to: 'shared#_micropost_form'
 
   match '/signup', to: 'users#new'
+  match '/userpersonality', to: 'users#usersmbtidescription'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   #match '/users', to: 'users#index'

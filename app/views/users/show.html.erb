@@ -6,6 +6,9 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <h3>
+        <%= link_to @usersmbti.typecode, userpersonality_path(:id => @user.id) %>
+      </h3>
     </section>
     <section>
       <%= render 'shared/stats' %>
@@ -20,4 +23,4 @@
       </ol>
     <% end %>
   </div>
-</div>
+</div> 
