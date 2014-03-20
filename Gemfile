@@ -10,7 +10,6 @@ gem 'libv8', '3.16.14.3'
 gem 'execjs'
 gem 'therubyracer'
 
-
 group :development, :test do
 	gem 'sqlite3', '1.3.5'
 	gem 'rspec-rails', '2.9.0'
@@ -35,5 +34,3 @@ group :production do
 	gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
     gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
-
-

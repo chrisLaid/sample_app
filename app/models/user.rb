@@ -8,7 +8,7 @@
 #  created_at :datetime        not null
 #  updated_at :datetime        not null
 #
-#
+# 
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation
   has_secure_password 
@@ -32,8 +32,7 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   
   def feed
-    #Microposts.where("user_id = ?", id)
-    microposts
+    Micropost.from_users_followed_by(self)
   end
 
   def following?(other_user)
