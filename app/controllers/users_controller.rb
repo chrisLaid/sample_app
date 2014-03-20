@@ -9,8 +9,8 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate(page: params[:page])
     @usersmbti = @user.mbtis.last
     if @usersmbti.nil?
-      @user = User.first
-      @usersmbti = @user.mbtis.last
+      @userdummy = User.first
+      @usersmbti = @userdummy.mbtis.last
     end
   end
 
