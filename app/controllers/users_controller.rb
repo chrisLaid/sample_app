@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     if @usersmbti.nil?
       @userdummy = User.first
       @usersmbti = @userdummy.mbtis.last
+      @usersmbti.typecode = ""
     end
   end
 
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
     if @usersmbtis.nil?
       @userdummy = User.first
       @usersmbtis = @userdummy.mbtis.last
+      @usersmbti.typecode = ""
     end
   end
 
